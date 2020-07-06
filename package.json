@@ -1,0 +1,23 @@
+{
+  "name": "prisma-lens",
+  "version": "1.0.0",
+  "description": "Prisma's design system (WIP)",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prisma/lens.git"
+  },
+  "keywords": [
+    "prisma",
+    "design"
+  ],
+  "author": "Matej Hrescak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prisma/lens/issues"
+  },
+  "homepage": "https://github.com/prisma/lens#readme"
+}
