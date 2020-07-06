@@ -16,7 +16,7 @@ Should loosely follow [the theme spec](https://system-ui.com/theme) with followi
 - Spacing
 - ...
 
-| Individual websites and products should extend this theme with overrides, ideally at the level of **usage values** and not primitives.
+> Individual websites and products should extend this theme with overrides, ideally at the level of **usage values** and not primitives.
 
 ### Iconography
 
