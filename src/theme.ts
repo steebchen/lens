@@ -6,6 +6,7 @@ https://system-ui.com/theme/
 const colorPrimitives = {
         black : '#000000',
         white : '#FFFFFF',
+        whiteFade50 : "rgba(255,255,255,0.5",
         gray100 : '#F7FAFC',
         gray200 : '#EDF2F7',
         gray300 : '#E2E8F0',
@@ -104,9 +105,8 @@ const colors = {
     textSecondary: colorPrimitives.gray600,
     textTertiary: colorPrimitives.gray500,
     invertedText: colorPrimitives.white,
-    invertedTextSecondary: colorPrimitives.gray500,
-    invertedTextTertiary:
-
+    invertedTextSecondary: colorPrimitives.gray300,
+    invertedTextTertiary: colorPrimitives.gray600,
 }
 
 const fonts = {
@@ -133,7 +133,12 @@ const baseFontSizes = {
 
 const fontSizes = {
     ...baseFontSizes,
-    body: baseFontSizes[16]
+    small: baseFontSizes[14],
+    body: baseFontSizes[16],
+    large: baseFontSizes[20],
+    display: baseFontSizes[40],
+    displaySmall: baseFontSizes[24],
+    displayLarge: baseFontSizes[48],
 }
 
 const baseSpace = {
@@ -169,6 +174,14 @@ const space = {
     large: baseSpace[20]
 }
 
+const radii = {
+    small: '5px'
+}
+
+const shadows = {
+    small: '0px 4px 8px rgba(60,45,111,0.1), 0px 1px 3px rgba(60,45,111,0.15)'
+}
+
 const breakpoints = {
     phone: '640px',
     tablet: '767px'
@@ -178,13 +191,31 @@ const transitions = {
     standard: '0.1s ease-in'
 }
 
+// Components
+
+const buttons = {
+    primary:{
+        color: {
+            default: colors.invertedText,
+            disabled: colorPrimitives.whiteFade50
+        },
+        background: {
+            default: colorPrimitives.green500,
+            hover: colorPrimitives.green600,
+            active: colorPrimitives.green700
+        }
+    }
+}
+
 const theme = {
     colors,
     fonts,
     fontSizes,
     space,
+    radii,
     breakpoints,
-    transitions
+    transitions,
+    buttons
 }
 
 export default theme
