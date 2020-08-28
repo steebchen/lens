@@ -213,6 +213,7 @@ const theme = {
     fontSizes,
     space,
     radii,
+    shadows,
     breakpoints,
     transitions,
     buttons
