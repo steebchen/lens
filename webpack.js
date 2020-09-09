@@ -15,13 +15,13 @@ module.exports = {
     filename: 'index.bundle.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'prisma-lens', // used for creating a lib
-    libraryTarget: 'umd', // used for creating a lib
+    libraryTarget: 'commonjs2', // used for creating a lib
     umdNamedDefine: true, // used for creating a lib
   },
   externals: {
     // avoid bundling all of React into the same file
-    react: 'React',
-    'react-dom': 'react-dom',
+    react: 'commonjs react',
+  'react-dom': 'commonjs react-dom',
   },
   module: {
     rules: [
