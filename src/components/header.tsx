@@ -1,8 +1,39 @@
-import * as React from 'react'
-import theme from '../theme'
+import * as React from "react";
+import theme from "../theme";
+import styled from "styled-components";
 
+const NavLinksWrapper = styled.div`
+  color: ${theme.colors.gray400};
+  font-weight: 600;
+  font-size: ${theme.fontSizes[14]};
+
+  a {
+    transition: color ${theme.transitions.standard};
+    padding: 0 ${theme.space[12]};
+    margin: 0 ${theme.space[8]};
+  }
+
+  a:hover {
+    color: ${theme.colors.white};
+  }
+
+  .github {
+    display: none;
+  }
+
+  @media (max-width: ${theme.breakpoints.phone}) {
+    a[href] {
+      display: block;
+      padding: ${theme.space[8]} ${theme.space[12]};
+    }
+
+    .github {
+      display: block;
+    }
+  }
+`;
 const NavLinks = () => (
-  <div className="links">
+  <NavLinksWrapper>
     <a href="https://www.prisma.io/docs/getting-started/quickstart">
       Quickstart
     </a>
@@ -13,134 +44,139 @@ const NavLinks = () => (
     <a href="https://github.com/prisma" className="github">
       GitHub
     </a>
-    <style jsx>{`
-      .links {
-        color: ${theme.colors.gray400};
-        font-weight: 600;
-        font-size: ${theme.fontSizes[14]};
-      }
+  </NavLinksWrapper>
+);
 
-      .links a {
-        transition: color ${theme.transitions.standard};
-        padding: 0 ${theme.space[12]};
-        margin: 0 ${theme.space[8]};
-      }
+const MobileNavWrapper = styled.nav`
+  position: relative;
+  display: none;
 
-      .links a:hover {
-        color: ${theme.colors.white};
-      }
+  .menu {
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: ${theme.fontSizes[16]};
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: ${theme.colors.gray300};
+  }
 
-      .github {
-        display: none;
-      }
+  .list {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: blue;
+    text-align: right;
+    padding: ${theme.space[16]} 0;
+    border-radius: 6px;
+    background: ${theme.colors.gray800};
+  }
 
-      @media (max-width: ${theme.breakpoints.phone}) {
-        .links a[href] {
-          display: block;
-          padding: ${theme.space[8]} ${theme.space[12]};
-        }
+  .list[data-open="true"] {
+    display: block;
+  }
 
-        .github {
-          display: block;
-        }
-      }
-    `}</style>
-  </div>
-)
-
+  @media (max-width: ${theme.breakpoints.phone}) {
+    display: block;
+  }
+`;
 class MobileNav extends React.Component<{}, { open: boolean }> {
-  private readonly nav: React.RefObject<HTMLElement>
+  private readonly nav: React.RefObject<HTMLElement>;
 
   state = {
     open: false,
-  }
+  };
 
   constructor(props: {}) {
-    super(props)
-    this.nav = React.createRef()
+    super(props);
+    this.nav = React.createRef();
   }
 
   toggle = () => {
-    this.setState({ open: !this.state.open })
-  }
+    this.setState({ open: !this.state.open });
+  };
 
   maybeClose = (e: MouseEvent) => {
-    const target = e.target
+    const target = e.target;
     if (!this.state.open) {
-      return
+      return;
     }
     if (!(target instanceof HTMLElement)) {
-      return
+      return;
     }
     if (this.nav.current && this.nav.current.contains(target)) {
-      return
+      return;
     }
     this.setState({
       open: false,
-    })
-  }
+    });
+  };
 
   componentDidMount() {
-    window.addEventListener('click', this.maybeClose)
+    window.addEventListener("click", this.maybeClose);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('click', this.maybeClose)
+    window.removeEventListener("click", this.maybeClose);
   }
 
   render() {
     return (
-      <nav ref={this.nav}>
+      <MobileNavWrapper ref={this.nav}>
         <button className="menu" onClick={this.toggle}>
           menu
         </button>
         <div className="list" data-open={this.state.open}>
           <NavLinks />
         </div>
-        <style jsx>{`
-          nav {
-            position: relative;
-            display: none;
-          }
-
-          .menu {
-            outline: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: ${theme.fontSizes[16]};
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: ${theme.colors.gray300};
-          }
-
-          .list {
-            display: none;
-            position: absolute;
-            right: 0;
-            background: blue;
-            text-align: right;
-            padding: ${theme.space[16]} 0;
-            border-radius: 6px;
-            background: ${theme.colors.gray800};
-          }
-
-          .list[data-open='true'] {
-            display: block;
-          }
-
-          @media (max-width: ${theme.breakpoints.phone}) {
-            nav {
-              display: block;
-            }
-          }
-        `}</style>
-      </nav>
-    )
+      </MobileNavWrapper>
+    );
   }
 }
 
+const NavWrapper = styled.nav`
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    height: 24px;
+    fill: ${theme.colors.white};
+  }
+
+  .github {
+    transition: transform ${theme.transitions.standard};
+    margin-left: ${theme.space[24]};
+  }
+
+  .github:hover {
+    transform: scale(1.2);
+  }
+
+  .github svg {
+    height: 24px;
+    fill: ${theme.colors.white};
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  @media (max-width: ${theme.breakpoints.phone}) {
+    .menu {
+      display: none;
+    }
+
+    .github {
+      display: none;
+    }
+  }
+`;
 const Nav = () => (
-  <nav>
+  <NavWrapper>
     <a href="https://www.prisma.io/">
       <svg
         className="logo"
@@ -167,64 +203,17 @@ const Nav = () => (
         </svg>
       </a>
     </div>
-    <style jsx>{`
-      nav {
-        margin: 0 auto;
-        max-width: 1200px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+  </NavWrapper>
+);
 
-      .logo {
-        height: 24px;
-        fill: ${theme.colors.white};
-      }
-
-      .github {
-        transition: transform ${theme.transitions.standard};
-        margin-left: ${theme.space[24]};
-      }
-
-      .github:hover {
-        transform: scale(1.2);
-      }
-
-      .github svg {
-        height: 24px;
-        fill: ${theme.colors.white};
-      }
-
-      .menu {
-        display: flex;
-      }
-
-      @media (max-width: ${theme.breakpoints.phone}) {
-        .menu {
-          display: none;
-        }
-
-        .github {
-          display: none;
-        }
-      }
-    `}</style>
-  </nav>
-)
-
+const HeaderWrapper = styled.div`
+  padding: 0 ${theme.space[16]};
+  display: flex;
+`;
 const Header = () => (
-  <div className="nav">
+  <HeaderWrapper>
     <Nav />
     <MobileNav />
-    <style jsx>
-      {`
-        .nav {
-          padding: 0 ${theme.space[16]};
-          display: flex;
-        }
-      `}
-    </style>
-  </div>
-)
-export default Header
+  </HeaderWrapper>
+);
+export default Header;
