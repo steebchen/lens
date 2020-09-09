@@ -2,11 +2,10 @@
   "name": "prisma-lens",
   "version": "1.0.0",
   "description": "Prisma's design system (WIP)",
-  "main": "dist/index.bundle",
+  "main": "dist/index.bundle.js",
   "files": [
     "./dist/index.bundle.js"
   ],
-  "typings": "dist/index.bundle",
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
