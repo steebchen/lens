@@ -1,8 +1,147 @@
-import * as React from 'react'
-import theme from '../theme'
+import * as React from "react";
+import theme from "../theme";
+import styled from "styled-components";
+
+const FooterSection = styled.div`
+  margin: ${theme.space[96]} auto ${theme.space[256]} auto;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+  padding-top: ${theme.space[80]};
+  border-top: 1px solid ${theme.colors.gray300};
+  .logo {
+    height: 24px;
+  }
+
+  .column {
+    flex: 2;
+  }
+  .four {
+    flex: 3;
+  }
+
+  .column .header {
+    font-weight: bold;
+    font-size: ${theme.fontSizes[16]};
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: ${theme.colors.gray500};
+  }
+
+  .column .link {
+    display: block;
+    margin-top: ${theme.space[24]};
+    font-size: ${theme.fontSizes[16]};
+    line-height: 1;
+    color: ${theme.colors.gray500};
+  }
+
+  .column .link + .link {
+    margin-top: ${theme.space[16]};
+  }
+
+  .column .link:hover {
+    color: ${theme.colors.gray600};
+  }
+
+  .column .link:active {
+    color: ${theme.colors.gray700};
+  }
+
+  .column .group + .group {
+    margin-top: ${theme.space[48]};
+  }
+
+  .jobs .tag {
+    display: inline-block;
+    border-radius: 6px;
+    margin-left: ${theme.space[8]};
+    padding: ${theme.space[4]} ${theme.space[8]};
+    background: ${theme.colors.green500};
+    font-size: ${theme.fontSizes[12]};
+    font-weight: bold;
+    color: white;
+    transition: transform ${theme.transitions.standard};
+  }
+
+  .jobs:hover .tag {
+    transform: scale(1.05);
+  }
+
+  .jobs .tag.black {
+    background: ${theme.colors.black};
+  }
+
+  .logo {
+    fill: ${theme.colors.gray500};
+  }
+
+  .four .description {
+    margin-top: ${theme.space[16]};
+    font-size: ${theme.fontSizes[16]};
+    line-height: 1.375;
+    color: ${theme.colors.gray500};
+  }
+
+  .social {
+    margin-top: ${theme.space[32]};
+    display: flex;
+    max-width: 100px;
+  }
+  .social a + a {
+    margin-left: ${theme.space[16]};
+  }
+
+  .social svg {
+    width: 24px;
+    height: 24px;
+    transition: transform ${theme.transitions.standard};
+  }
+
+  .social svg:hover {
+    transform: scale(1.2);
+  }
+
+  .copyright {
+    margin-top: ${theme.space[32]};
+    font-size: ${theme.fontSizes[16]};
+    line-height: 1;
+    color: ${theme.colors.gray500};
+  }
+
+  a.cookie-pref {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .berlin {
+    margin-top: ${theme.space[8]};
+    font-size: ${theme.fontSizes[16]};
+    line-height: 1;
+    color: ${theme.colors.gray500};
+  }
+
+  @media (max-width: ${theme.breakpoints.tablet}) {
+    margin-top: ${theme.space[48]};
+    margin-bottom: ${theme.space[48]};
+    flex-direction: column;
+    padding: 0 24px;
+
+    .column {
+      margin-top: ${theme.space[48]};
+    }
+
+    .column .group + .group {
+      margin-top: ${theme.space[48]};
+    }
+  }
+`;
+
 
 const Footer = ({ newsletterComponent }: any) => (
-  <div className="section">
+  <FooterSection>
     <div className="column one">
       <svg
         className="logo"
@@ -35,7 +174,10 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://www.prisma.io/docs/">
           Docs
         </a>
-        <a className="link" href="https://www.prisma.io/docs/getting-started/quickstart">
+        <a
+          className="link"
+          href="https://www.prisma.io/docs/getting-started/quickstart"
+        >
           Get Started
         </a>
         <a
@@ -70,9 +212,6 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://github.com/prisma/prisma/discussions">
           Discussions
         </a>
-        {/* <a className="link" href="#">
-              Prisma Day
-            </a> */}
         <a className="link" href="https://www.meetup.com/graphql-berlin/">
           GraphQL Meetup
         </a>
@@ -203,148 +342,7 @@ const Footer = ({ newsletterComponent }: any) => (
         <p className="berlin">Made with ❤️ in Berlin</p>
       </div>
     </div>
-    <style jsx>{`
-      .section {
-        margin: ${theme.space[96]} auto ${theme.space[256]} auto;
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        padding: 0;
-        padding-top: ${theme.space[80]};
-        border-top: 1px solid ${theme.colors.gray300};
-      }
+  </FooterSection>
+);
 
-      .logo {
-        height: 24px;
-      }
-
-      .column {
-        flex: 2;
-      }
-      .four {
-        flex: 3;
-      }
-
-      .column .header {
-        font-weight: bold;
-        font-size: ${theme.fontSizes[16]};
-        line-height: 1;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: ${theme.colors.gray500};
-      }
-
-      .column .link {
-        display: block;
-        margin-top: ${theme.space[24]};
-        font-size: ${theme.fontSizes[16]};
-        line-height: 1;
-        color: ${theme.colors.gray500};
-      }
-
-      .column .link + .link {
-        margin-top: ${theme.space[16]};
-      }
-
-      .column .link:hover {
-        color: ${theme.colors.gray600};
-      }
-
-      .column .link:active {
-        color: ${theme.colors.gray700};
-      }
-
-      .column .group + .group {
-        margin-top: ${theme.space[48]};
-      }
-
-      .jobs .tag {
-        display: inline-block;
-        border-radius: 6px;
-        margin-left: ${theme.space[8]};
-        padding: ${theme.space[4]} ${theme.space[8]};
-        background: ${theme.colors.green500};
-        font-size: ${theme.fontSizes[12]};
-        font-weight: bold;
-        color: white;
-        transition: transform ${theme.transitions.standard};
-      }
-
-      .jobs:hover .tag {
-        transform: scale(1.05);
-      }
-
-      .jobs .tag.black {
-        background: ${theme.colors.black};
-      }
-
-      .logo {
-        fill: ${theme.colors.gray500};
-      }
-
-      .four .description {
-        margin-top: ${theme.space[16]};
-        font-size: ${theme.fontSizes[16]};
-        line-height: 1.375;
-        color: ${theme.colors.gray500};
-      }
-
-      .social {
-        margin-top: ${theme.space[32]};
-        display: flex;
-        max-width: 100px;
-      }
-      .social a + a {
-        margin-left: ${theme.space[16]};
-      }
-
-      .social svg {
-        width: 24px;
-        height: 24px;
-        transition: transform ${theme.transitions.standard};
-      }
-
-      .social svg:hover {
-        transform: scale(1.2);
-      }
-
-      .copyright {
-        margin-top: ${theme.space[32]};
-        font-size: ${theme.fontSizes[16]};
-        line-height: 1;
-        color: ${theme.colors.gray500};
-      }
-
-      a.cookie-pref {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-
-      .berlin {
-        margin-top: ${theme.space[8]};
-        font-size: ${theme.fontSizes[16]};
-        line-height: 1;
-        color: ${theme.colors.gray500};
-      }
-
-      @media (max-width: ${theme.breakpoints.tablet}) {
-        .section {
-          margin-top: ${theme.space[48]};
-          margin-bottom: ${theme.space[48]};
-          flex-direction: column;
-          padding: 0 24px;
-        }
-
-        .column {
-          margin-top: ${theme.space[48]};
-        }
-
-        .column .group + .group {
-          margin-top: ${theme.space[48]};
-        }
-      }
-    `}</style>
-  </div>
-)
-
-export default Footer
+export default Footer;
