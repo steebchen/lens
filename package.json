@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/prisma/lens/issues"
   },
-  "homepage": "https://github.com/prisma/lens#readme"
+  "homepage": "https://github.com/prisma/lens#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
