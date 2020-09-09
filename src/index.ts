@@ -1,1 +1,3 @@
-export { default as theme } from './theme'
+export { default } from './theme'
+export { default as Header } from './components/header'
+export { default as Footer } from './components/footer'
