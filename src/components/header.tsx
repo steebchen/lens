@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {Component, RefObject, createRef} from "react";
 import theme from "../theme";
 import styled from "styled-components";
 
@@ -80,8 +80,8 @@ const MobileNavWrapper = styled.nav`
     display: block;
   }
 `;
-class MobileNav extends React.Component<{}, { open: boolean }> {
-  private readonly nav: React.RefObject<HTMLElement>;
+class MobileNav extends Component<{}, { open: boolean }> {
+  private readonly nav: RefObject<HTMLElement>;
 
   state = {
     open: false,
@@ -89,7 +89,7 @@ class MobileNav extends React.Component<{}, { open: boolean }> {
 
   constructor(props: {}) {
     super(props);
-    this.nav = React.createRef();
+    this.nav = createRef();
   }
 
   toggle = () => {
@@ -113,11 +113,17 @@ class MobileNav extends React.Component<{}, { open: boolean }> {
   };
 
   componentDidMount() {
-    window.addEventListener("click", this.maybeClose);
+    if (typeof window !== 'undefined') {
+      window.addEventListener("click", this.maybeClose);
+    }
+    
   }
 
   componentWillUnmount() {
-    window.removeEventListener("click", this.maybeClose);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener("click", this.maybeClose);
+    }
+    
   }
 
   render() {
