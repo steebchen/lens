@@ -161,7 +161,7 @@ const Footer = ({ newsletterComponent }: any) => (
         <h3 className="header">Products</h3>
         <a
           className="link"
-          href="https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client/api"
+          href="https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client"
         >
           Prisma Client
         </a>
@@ -176,7 +176,7 @@ const Footer = ({ newsletterComponent }: any) => (
         </a>
         <a
           className="link"
-          href="https://www.prisma.io/docs/getting-started/quickstart"
+          href="https://www.prisma.io/docs/getting-started/quickstart-typescript"
         >
           Get Started
         </a>
