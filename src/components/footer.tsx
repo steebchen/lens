@@ -339,7 +339,7 @@ const Footer = ({ newsletterComponent }: any) => (
           </a>
         </div>
         <p className="copyright">Prisma © 2018-2020.</p>
-        <p className="berlin">Made with ❤️ in Berlin</p>
+        <p className="berlin">Made with ❤️ in Berlin and worldwide</p>
       </div>
     </div>
   </FooterSection>
