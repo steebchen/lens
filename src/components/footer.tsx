@@ -192,7 +192,7 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://www.howtographql.com/">
           How to GraphQL
         </a>
-        <a className="link" href="https://www.prisma.io/dataguide/">
+        <a className="link" href="https://dataguide.prisma.io/">
           Data Guide
         </a>
       </div>
@@ -339,7 +339,7 @@ const Footer = ({ newsletterComponent }: any) => (
           </a>
         </div>
         <p className="copyright">Prisma © 2018-2020.</p>
-        <p className="berlin">Made with ❤️ in Berlin and worldwide</p>
+        <p className="berlin">Made with ❤️ in Berlin</p>
       </div>
     </div>
   </FooterSection>
