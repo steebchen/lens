@@ -1,0 +1,109 @@
+.header-wrapper {
+  padding: 0 16px;
+  display: flex;
+}
+
+.nav-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wrapper .logo {
+  height: 24px;
+  fill: white;
+}
+
+.nav-wrapper .github {
+  transition: transform 0.1s ease-in;
+  margin-left: 24px;
+}
+
+.nav-wrapper .github:hover {
+  transform: scale(1.2);
+}
+
+.nav-wrapper .github svg {
+  height: 24px;
+  fill: white;
+}
+
+.nav-wrapper .menu {
+  display: flex;
+}
+
+.mobile-wrapper {
+  position: relative;
+  display: none;
+}
+
+.mobile-wrapper .menu {
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e2e8f0;
+}
+
+.mobile-wrapper .list {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: blue;
+  text-align: right;
+  padding: 16px 0;
+  border-radius: 6px;
+  background: #2d3748;
+}
+
+.mobile-wrapper .list[data-open="true"] {
+  display: block;
+}
+
+.navlinks-wrapper {
+  color: #cbd5e0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.navlinks-wrapper a {
+  transition: color 0.1s ease-in;
+  padding: 0 12px;
+  margin: 0 8px;
+}
+
+.navlinks-wrapper a:hover {
+  color: white;
+}
+
+.navlinks-wrapper .github {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper .menu {
+    display: none;
+  }
+
+  .nav-wrapper .github {
+    display: none;
+  }
+
+  .mobile-wrapper {
+    display: block;
+  }
+
+  .navlinks-wrapper a[href] {
+    display: block;
+    padding: 8px 12px;
+  }
+
+  .navlinks-wrapper .github {
+    display: block;
+  }
+}
