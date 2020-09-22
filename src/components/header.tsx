@@ -1,7 +1,7 @@
 import React, {Component, RefObject, createRef} from "react";
 // import theme from "../theme";
 // import styled from "styled-components";
-import './styles'
+import './styles.css'
 
 // const NavLinksWrapper = styled.div`
 //   color: ${theme.colors.gray400};
@@ -130,14 +130,14 @@ class MobileNav extends Component<{}, { open: boolean }> {
 
   render() {
     return (
-      <div className="mobile-wrapper" ref={this.nav}>
+      <nav className="mobile-wrapper" ref={this.nav}>
         <button className="menu" onClick={this.toggle}>
           menu
         </button>
         <div className="list" data-open={this.state.open}>
           <NavLinks />
         </div>
-      </div>
+      </nav>
     );
   }
 }
@@ -184,7 +184,7 @@ class MobileNav extends Component<{}, { open: boolean }> {
 //   }
 // `;
 const Nav = () => (
-  <div className="nav-wrapper">
+  <nav className="nav-wrapper">
     <a href="https://www.prisma.io/">
       <svg
         className="logo"
@@ -211,7 +211,7 @@ const Nav = () => (
         </svg>
       </a>
     </div>
-  </div>
+  </nav>
 );
 
 // const HeaderWrapper = styled.div`
