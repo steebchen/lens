@@ -1,4 +1,4 @@
-import React, {Component, RefObject, createRef} from "react";
+import React, { Component, RefObject, createRef } from "react";
 import theme from "../theme";
 import styled from "styled-components";
 
@@ -116,14 +116,14 @@ class MobileNav extends Component<{}, { open: boolean }> {
     if (typeof window !== 'undefined') {
       window.addEventListener("click", this.maybeClose);
     }
-    
+
   }
 
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
       window.removeEventListener("click", this.maybeClose);
     }
-    
+
   }
 
   render() {
@@ -188,8 +188,11 @@ const Nav = () => (
         className="logo"
         viewBox="0 0 90 24"
         fill="none"
+        role="img"
         xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="logoTitle"
       >
+        <title id="logoTitle">Prisma.io</title>
         <path
           fillRule="evenodd"
           clipRule="evenodd"
