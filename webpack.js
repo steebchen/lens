@@ -21,7 +21,12 @@ module.exports = {
   externals: {
     // avoid bundling all of React into the same file
     react: 'commonjs react',
-  'react-dom': 'commonjs react-dom',
+    'react-dom': 'commonjs react-dom',
+    "styled-components": {
+      commonjs: "styled-components",
+      commonjs2: "styled-components",
+      amd: "styled-components",
+    },
   },
   module: {
     rules: [
@@ -46,23 +51,22 @@ module.exports = {
         test: /\.js$/,
         loader: 'source-map-loader', // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       },
-    //   {
-    //     test: /\.(png|svg|jpg|gif)$/,
-    //     use: ['file-loader'],
-    //   },
-    //   {
-    //     test: /\.(woff|woff2|eot|)$/,
-    //     use: ['file-loader'],
-    //   },
-    //   {
-    //     test: /\.scss$/,
-    //     use: ['style-loader', 'css-loader', 'sass-loader'],
-    //   },
-    // {
-    //   test: /\.css$/i,
-    //   use: ['style-loader', 'css-loader'],
-    // }
+      //   {
+      //     test: /\.(png|svg|jpg|gif)$/,
+      //     use: ['file-loader'],
+      //   },
+      //   {
+      //     test: /\.(woff|woff2|eot|)$/,
+      //     use: ['file-loader'],
+      //   },
+      //   {
+      //     test: /\.scss$/,
+      //     use: ['style-loader', 'css-loader', 'sass-loader'],
+      //   },
+      // {
+      //   test: /\.css$/i,
+      //   use: ['style-loader', 'css-loader'],
+      // }
     ],
   },
 };
-
