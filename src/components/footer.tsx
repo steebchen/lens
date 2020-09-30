@@ -245,6 +245,12 @@ const Footer = ({ newsletterComponent }: any) => (
         >
           Terms & Privacy
         </a>
+        <a
+          className="link"
+          href="https://www.prisma.io/sitemap"
+        >
+          HTML Sitemap
+        </a>
       </div>
     </div>
     <div className="column four">
