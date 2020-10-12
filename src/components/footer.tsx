@@ -181,10 +181,10 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://www.howtographql.com/">
           How to GraphQL
         </a>
-        <a className="link" href="https://prisma.io/dataguide/">
+        <a className="link" href="https://www.prisma.io/dataguide/">
           Data Guide
         </a>
-        <a className="link" href="https://prisma.io/nextjs">
+        <a className="link" href="https://www.prisma.io/nextjs">
           Prisma with Next.js
         </a>
       </div>
