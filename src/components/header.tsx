@@ -169,6 +169,7 @@ const NavWrapper = styled.nav`
 
   .menu {
     display: flex;
+    line-height: 1.5;
   }
 
   @media (max-width: ${theme.breakpoints.phone}) {
