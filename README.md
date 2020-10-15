@@ -12,6 +12,7 @@ Prisma Lens uses [Storybook](https://storybook.js.org/) as a preview mechanism f
 ```
 npm run storybook
 ```
+Makre sure to run `npm build` before pushing too to make sure client repositories pick it up on update.
 
 ## Artifacts
 ### Base Theme
