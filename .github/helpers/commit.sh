@@ -13,7 +13,7 @@ git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_RE
 git pull github "${GITHUB_REF}" --ff-only
 
 git add -A .
-git commit -m "$PRISMA_CLI_VERSION: $1" -m "via the action https://github.com/prisma/lens/commit/$GITHUB_SHA/checks?check_suite_id=$GITHUB_ACTION" || true
+git commit -m "$1" -m "via the action https://github.com/prisma/lens/commit/$GITHUB_SHA/checks?check_suite_id=$GITHUB_ACTION" || true
 
 git push github HEAD:"${GITHUB_REF}"
 
