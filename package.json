@@ -1,10 +1,11 @@
 {
   "name": "prisma-lens",
   "version": "1.0.0",
-  "description": "Prisma's design system (WIP)",
+  "description": "Prisma's design system",
   "main": "dist/index.bundle.js",
   "files": [
-    "./dist/index.bundle.js"
+    "./dist/index.bundle.js",
+    "./dist/index.bundle.js.map"
   ],
   "scripts": {
     "type-check": "tsc --noEmit",
