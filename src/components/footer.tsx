@@ -139,11 +139,14 @@ const FooterSection = styled.div`
   }
 `;
 
-
 const Footer = ({ newsletterComponent }: any) => (
   <FooterSection>
     <div className="column one">
-      <img src="https://images2.prisma.io/footer-logo.png" alt="Prisma Logo" style={{ width: 90 + "px", height: 24 + "px" }} />
+      <img
+        src="https://images2.prisma.io/footer-logo.png"
+        alt="Prisma Logo"
+        style={{ width: 90 + "px", height: 24 + "px" }}
+      />
     </div>
     <div className="column two">
       <div className="group">
@@ -228,16 +231,10 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="/blog/">
           Blog
         </a>
-        <a
-          className="link"
-          href="https://pris.ly/privacy"
-        >
+        <a className="link" href="https://pris.ly/privacy">
           Terms & Privacy
         </a>
-        <a
-          className="link"
-          href="https://www.prisma.io/sitemap"
-        >
+        <a className="link" href="https://www.prisma.io/sitemap">
           HTML Sitemap
         </a>
       </div>
@@ -264,24 +261,6 @@ const Footer = ({ newsletterComponent }: any) => (
               <title id="footerIconTwitter">Find us on Twitter</title>
               <path
                 d="M23 1.01a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1a10.66 10.66 0 01-9-4.53s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83A7.72 7.72 0 0023 1.01v0z"
-                stroke={theme.colors.gray500}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/prisma.io">
-            <svg
-              viewBox="0 0 13 22"
-              fill="none"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-labelledby="footerIconFacebook"
-            >
-              <title id="footerIconFacebook">Find us on Facebook</title>
-              <path
-                d="M12 1H9a5 5 0 00-5 5v3H1v4h3v8h4v-8h3l1-4H8V6a1 1 0 011-1h3V1z"
                 stroke={theme.colors.gray500}
                 strokeWidth="2"
                 strokeLinecap="round"
