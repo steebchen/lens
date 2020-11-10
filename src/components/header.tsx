@@ -34,11 +34,11 @@ const NavLinksWrapper = styled.div`
 `;
 const NavLinks = () => (
   <NavLinksWrapper>
-    <a href="https://www.prisma.io/docs/getting-started/quickstart">
+    <a href="https://www.prisma.io/docs/getting-started/quickstart-typescript">
       Quickstart
     </a>
     <a href="https://www.prisma.io/docs/">Docs</a>
-    <a href="https://www.prisma.io/docs/more/faq">FAQ</a>
+    <a href="https://www.prisma.io/docs/about/faq">FAQ</a>
     <a href="https://www.prisma.io/community">Community</a>
     <a href="https://www.prisma.io/blog/">Blog</a>
     <a href="https://github.com/prisma" className="github">
