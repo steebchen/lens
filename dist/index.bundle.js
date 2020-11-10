@@ -27,7 +27,7 @@ module.exports=function(e){var t={};function a(l){if(t[l])return t[l].exports;va
       display: block;
     }
   }
-`,u=()=>i.default.createElement(d,null,i.default.createElement("a",{href:"https://www.prisma.io/docs/getting-started/quickstart"},"Quickstart"),i.default.createElement("a",{href:"https://www.prisma.io/docs/"},"Docs"),i.default.createElement("a",{href:"https://www.prisma.io/docs/more/faq"},"FAQ"),i.default.createElement("a",{href:"https://www.prisma.io/community"},"Community"),i.default.createElement("a",{href:"https://www.prisma.io/blog/"},"Blog"),i.default.createElement("a",{href:"https://github.com/prisma",className:"github"},"GitHub")),m=c.default.nav`
+`,u=()=>i.default.createElement(d,null,i.default.createElement("a",{href:"https://www.prisma.io/docs/getting-started/quickstart-typescript"},"Quickstart"),i.default.createElement("a",{href:"https://www.prisma.io/docs/"},"Docs"),i.default.createElement("a",{href:"https://www.prisma.io/docs/about/faq"},"FAQ"),i.default.createElement("a",{href:"https://www.prisma.io/community"},"Community"),i.default.createElement("a",{href:"https://www.prisma.io/blog/"},"Blog"),i.default.createElement("a",{href:"https://github.com/prisma",className:"github"},"GitHub")),m=c.default.nav`
   position: relative;
   display: none;
 
