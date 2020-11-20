@@ -38,7 +38,7 @@ const NavLinks = () => (
       Quickstart
     </a>
     <a href="https://www.prisma.io/docs/">Docs</a>
-    <a href="https://www.prisma.io/docs/more/faq">FAQ</a>
+    <a href="https://www.prisma.io/docs/about/faq">FAQ</a>
     <a href="https://www.prisma.io/community">Community</a>
     <a href="https://www.prisma.io/blog/">Blog</a>
     <a href="https://github.com/prisma" className="github">
