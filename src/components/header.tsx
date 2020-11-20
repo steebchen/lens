@@ -34,7 +34,7 @@ const NavLinksWrapper = styled.div`
 `;
 const NavLinks = () => (
   <NavLinksWrapper>
-    <a href="https://www.prisma.io/docs/getting-started/quickstart">
+    <a href="https://www.prisma.io/docs/getting-started/quickstart-typescript">
       Quickstart
     </a>
     <a href="https://www.prisma.io/docs/">Docs</a>
@@ -113,17 +113,15 @@ class MobileNav extends Component<{}, { open: boolean }> {
   };
 
   componentDidMount() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.addEventListener("click", this.maybeClose);
     }
-
   }
 
   componentWillUnmount() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.removeEventListener("click", this.maybeClose);
     }
-
   }
 
   render() {
@@ -147,6 +145,7 @@ const NavWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  line-height: 1.5;
 
   .logo {
     height: 24px;
