@@ -193,6 +193,18 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://www.prisma.io/graphql">
           Prisma with GraphQL
         </a>
+        <a className="link" href="/apollo">
+          Prisma with Apollo
+        </a>
+        <a className="link" href="/nestjs">
+          Prisma with NestJS
+        </a>
+        <a className="link" href="/express">
+          Prisma with Express
+        </a>
+        <a className="link" href="/hapi">
+          Prisma with hapi
+        </a>
       </div>
     </div>
     <div className="column three">
@@ -215,6 +227,14 @@ const Footer = ({ newsletterComponent }: any) => (
         </a>
         <a className="link" href="https://www.meetup.com/TypeScript-Berlin/">
           TypeScript Meetup
+        </a>
+        <a
+          className="link"
+          href="https://www.meetup.com/advanced-typescript-trickery/"
+          rel="norefferer noopener"
+          target="_blank"
+        >
+          Advanced Typescript Trickery
         </a>
       </div>
       <div className="group">
