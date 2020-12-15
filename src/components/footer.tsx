@@ -234,7 +234,7 @@ const Footer = ({ newsletterComponent }: any) => (
           rel="norefferer noopener"
           target="_blank"
         >
-          Advanced Typescript Trickery
+          Advanced TypeScript Trickery
         </a>
       </div>
       <div className="group">
