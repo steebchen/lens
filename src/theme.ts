@@ -110,8 +110,8 @@ const colors = {
 };
 
 const fonts = {
-  text: `"Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
-  display: `"Montserrat", system-ui,  Arial, sans-serif`,
+  text: `"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+  display: `"Barlow", system-ui,  Arial, sans-serif`,
   mono: `"Jetbrains Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
 };
 
