@@ -138,7 +138,7 @@ const fontSizes = {
   small: baseFontSizes[14],
   body: baseFontSizes[16],
   large: baseFontSizes[20],
-  display: baseFontSizes[56],
+  display: baseFontSizes[48],
   displaySmall: baseFontSizes[24],
   displayLarge: baseFontSizes[72],
 };
