@@ -128,6 +128,7 @@ const baseFontSizes = {
   36: "2.25rem",
   40: "2.5rem",
   48: "3rem",
+  56: "3.5rem",
   64: "4rem",
   72: "4.5rem",
 };
@@ -137,7 +138,7 @@ const fontSizes = {
   small: baseFontSizes[14],
   body: baseFontSizes[16],
   large: baseFontSizes[20],
-  display: baseFontSizes[48],
+  display: baseFontSizes[56],
   displaySmall: baseFontSizes[24],
   displayLarge: baseFontSizes[72],
 };
