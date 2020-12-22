@@ -110,8 +110,8 @@ const colors = {
 };
 
 const fonts = {
-  text: `"Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
-  display: `"Montserrat", system-ui,  Arial, sans-serif`,
+  text: `"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+  display: `"Barlow", system-ui,  Arial, sans-serif`,
   mono: `"Jetbrains Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
 };
 
@@ -128,7 +128,9 @@ const baseFontSizes = {
   36: "2.25rem",
   40: "2.5rem",
   48: "3rem",
+  56: "3.5rem",
   64: "4rem",
+  72: "4.5rem",
 };
 
 const fontSizes = {
@@ -136,9 +138,9 @@ const fontSizes = {
   small: baseFontSizes[14],
   body: baseFontSizes[16],
   large: baseFontSizes[20],
-  display: baseFontSizes[40],
+  display: baseFontSizes[48],
   displaySmall: baseFontSizes[24],
-  displayLarge: baseFontSizes[48],
+  displayLarge: baseFontSizes[72],
 };
 
 const baseSpace = {
