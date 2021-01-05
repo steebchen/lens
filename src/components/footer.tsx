@@ -23,13 +23,13 @@ const FooterSection = styled.div`
 
   .column .header {
     font-weight: bold;
-    font-size: ${theme.fontSizes[16]};
+    font-family: ${theme.fonts.display};
+    font-size: ${theme.fontSizes[18]};
     line-height: 1;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: ${theme.colors.gray500};
   }
-
+  
   .column .link {
     display: block;
     margin-top: ${theme.space[24]};
@@ -160,6 +160,9 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://app.prisma.io/login">
           Prisma 1 Cloud
         </a>
+        <a className="link" href="https://pris.ly/roadmap">
+          Product Roadmap
+        </a>
       </div>
       <div className="group">
         <h3 className="header">Resources</h3>
@@ -187,6 +190,10 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://www.prisma.io/dataguide/">
           Data Guide
         </a>
+
+      </div>
+      <div className="group">
+        <h3 className="header">Prisma With</h3>
         <a className="link" href="https://www.prisma.io/nextjs">
           Prisma with Next.js
         </a>
@@ -242,14 +249,14 @@ const Footer = ({ newsletterComponent }: any) => (
         <a className="link" href="https://www.prisma.io/about">
           About
         </a>
-        <a className="link" href="https://www.prisma.io/jobs">
-          Jobs
+        <a className="link jobs" href="https://www.prisma.io/jobs">
+          Jobs <span className="tag">We're hiring!</span>
         </a>
         <a
-          className="link jobs"
+          className="link"
           href="https://www.notion.so/prismaio/What-Prisma-Cares-About-32946d99f9ea4925a796663dc8945c42"
         >
-          Causes <span className="tag black">Black Lives Matter</span>
+          Causes 
         </a>
         <a className="link" href="/blog/">
           Blog
