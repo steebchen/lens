@@ -16,6 +16,7 @@ module.exports=function(e){var t={};function a(r){if(t[r])return t[r].exports;va
     font-family: "Barlow";
     font-style: normal;
     font-weight: 700;
+    font-display: swap;
     src: url("https://www.prisma.io/fonts/barlow-v5-latin/barlow-v5-latin-700.woff2") format("woff2"),
       url("https://www.prisma.io/fonts/barlow-v5-latin/barlow-v5-latin-700.woff") format("woff");
   }
